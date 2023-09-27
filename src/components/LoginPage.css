@@ -1,16 +1,281 @@
-/* src/appcharge-in/components/LoginPage.css */
-.login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/* .login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.icons {
+  margin-left: 10px;
+}
+
+form {
+  width: 300px;
+  max-width: 80%;
+}
+
+form label,
+form input,
+form button {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.input-container {
+  position: relative;
+}
+
+.password-input {
+  padding-right: 30px;
+}
+
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  form {
+    width: 90%;
+  }
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+/* Resets and Base Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* || UTILITY CLASSES */
+.errmsg {
+  color: #000; /* Changed to black */
+}
+
+/* || GENERAL STYLES */
+
+body {
+  font: 1.5rem 'Nunito', sans-serif;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #000;
+}
+
+input, button {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+section {
+  width: min(100%, 500px);
+}
+
+a, a:visited {
+  color: #000;
+}
+
+a:hover, a:focus {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+/* || LOGIN */
+
+.login {
+  background-color: #fff;
+  max-width: 507px;
+  width: 100%;
+  padding: 4rem 3.5rem;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  background-color: #fff;
+  margin: 3rem 0;
+}
+
+.login form {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.login input, .login button {
+  padding: 0.5em;
+  border-radius: 15px;
+}
+
+/* || PAGES */
+
+.public, .welcome, .users {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.public main {
+  flex-grow: 1;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  padding: 1rem;
+}
+
+.users ul {
+  list-style-type: none;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 16px;
+  font-family: Chivo; /* Added */
+  font-weight: 400; /* Added */
+  line-height: 22px; /* Added */
+  letter-spacing: 0em; /* Added */
+  text-align: right; /* Added */
+}
+
+.remember-forgot span:nth-child(2) {
+  color: #369C96;
+  /* Additional styles */
+  font-family: Chivo;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: right;
+}
+
+
+
+.login p {
+  font-size: 16px;
+  font-family: 'Chivo'; /* Changed from 'font' to 'font-family' */
+}
+
+.login label[for="Adresse mail"],
+.login label[for="mot de passe"] {
+  font-size: 18px;
+  width: 395px;
+  height: 33px;
+
+
+}
+
+.login button {
+  height: 61px;
+  padding: 22px 50px;
+  border-radius: 8px;
+  font-size: 18px;
+  background: #369C96;
+  color: #ffffff;
+}
+
+.login h1 {
+  margin-bottom: 8px;
+}
+
+#Adresse\ mail::placeholder,
+#mot\ de\ passe::placeholder {
+  font-size: 16px;
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
+  .login {
+    padding: 64px 56px;
   }
 
-  .login-form {
-    text-align: center;
-  }
 
-  .login-input {
-    margin: 10px;
-    padding: 8px;
-  }
+}
+#Adresse\ mail,
+#mot\ de\ passe,
+.login button {
+    width: 395px;  /* Adjusted as requested */
+    height: 61px;
+    padding: 5px 9px;
+    border: 1px solid #DCE6E5;
+    box-shadow: 0px 0px 4px 0px #0000001A;
+    border-radius: 8px;  /* Assuming you still want the rounded corners */
+    margin-bottom: 10px;  /* This creates the gap between elements */
+}
+
+
+#Adresse\ mail,
+#mot\ de\ passe {
+    width: 395px;
+    height: 33px;
+    padding: 5px 9px;
+    border: 1px solid #DCE6E5;
+    box-shadow: 0px 0px 4px 0px #0000001A;
+    border-radius: 5px;
+}
+
+/* Header, Icone  */
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.icons {
+  margin-left: 8px;
+   color: #369C96;
+}
+
+.icons svg {
+  width: 36px;
+  height: 36px;
+
+}
+
+/* AiOutlineEye  */
+
+.input-container {
+  position: relative;
+  display: inline-block;
+}
+
+.password-input {
+  padding-right: 30px; /* Adjust this value to accommodate the icon */
+  width: 100%; /* Make sure the input takes up all available space */
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px; /* Adjust this value to position the icon as needed */
+  top: 40%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+
