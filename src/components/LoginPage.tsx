@@ -137,7 +137,7 @@ const LoginPage: React.FC = () => {
       <p>Entrez vos identifiants pour accéder á votre <br /> espace personnel.</p>
 
       <form onSubmit={handleLogin}>
-        <label htmlFor="Adresse mail">Adresse mail:</label>
+        <label htmlFor="Adresse mail">Adresse mail</label>
         <input
           type="text"
           id="Adresse mail"
@@ -148,7 +148,7 @@ const LoginPage: React.FC = () => {
           required
         />
 
-        <label htmlFor="mot de passe">mot de passe:</label>
+        <label htmlFor="mot de passe">mot de passe</label>
         <div className="input-container">
           <input
             type="password"
